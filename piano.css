@@ -165,7 +165,25 @@ header .control span {
     display:none; 
 }
 
-.waveText{
+.waveText {
     margin-bottom: 6px;
     font-size: 1.15rem;
+}
+
+#captureBtn {
+    height: 30px;
+    width: 70px;
+    border:red 1px solid;
+    border-radius: 3px;
+}
+
+#captureBtn span {
+    font-size: 1.15rem;
+}
+
+#captureBtn.active {
+    height: 30px;
+    width: 70px;
+    border:red 1px solid;
+    border-radius: 3px;
 }
