@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="piano.css">
+    <link rel="shortcut icon" href="#">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <form id="waveForm">        
+                <legend><p class="waveText">Wave Type</p>
+                    <label>
+                        <input type="radio" name="wave" value="pianoSound" class="waveText"
+                            onclick="myPlayer.setWaveType(this.value)"> piano <br>
+                    </label>
+                    <label>
+                        <input type="radio" name="wave" value="sine" class="waveText"
+                            onclick="myPlayer.setWaveType(this.value)"> sine <br>
+                    </label>
+                    <label>
+                        <input type="radio" name="wave" value="square" class="waveText"
+                            onclick="myPlayer.setWaveType(this.value);"> square  <br>
+                    </label>           
+                        <input type="radio" name="wave" value="sawtooth" class="waveText"
+                            onclick="myPlayer.setWaveType(this.value);"> sawtooth  <br>
+                    </label>
+                        <input type="radio" name="wave" value="triangle" class="waveText"
+                            onclick="myPlayer.setWaveType(this.value);"> triangle  <br>
+                    </label>
+                </legend>
+            </form>
+            <div class="control volume-slider">
+                <span class="volHeader">Volume</span> 
+                <input type="range" min="0" max="1" value="0.5" step='any'>
+            </div>
+            <div class="control keys-checkbox" checked>
+                <span>Show Notes</span>
+                <input type="checkbox">
+            </div>
+            <div class="control record-checkbox" checked>
+                <span>Record</span>
+                <input type="checkbox">
+            </div>
+        </header>
+        <ul class="piano-keys">
+            <li class="white key" data-key="a"><span>c</span></li>
+            <li class="black key" data-key="w"><span>c#</span></li>
+            <li class="white key" data-key="s"><span>d</span></li>
+            <li class="black key" data-key="e"><span>d#</span></li>
+            <li class="white key" data-key="d"><span>e</span></li>
+            <li class="white key" data-key="f"><span>f</span></li>
+            <li class="black key" data-key="t"><span>f#</span></li>
+            <li class="white key" data-key="g"><span>g</span></li>
+            <li class="black key" data-key="y"><span>g#</span></li>
+            <li class="white key" data-key="h"><span>a</span></li>
+            <li class="black key" data-key="u"><span>a#</span></li>
+            <li class="white key" data-key="j"><span>b</span></li>
+            <li class="white key" data-key="k"><span>c</span></li>
+            <li class="black key" data-key="o"><span>c#</span></li>
+            <li class="white key" data-key="l"><span>d</span></li>
+            <li class="black key" data-key="p"><span>d#</span></li>
+            <li class="white key" data-key=";"><span>e</span></li>
+        </ul>  data-key="c"
+    </div>
+
+
+    <script src="piano.js"></script> 
+</body>
+</html>
+
