@@ -9,27 +9,23 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="wrapper">
-        <header>
+    <canvas id="myCanvas"></canvas>
+    <div class="piano">
+        <header id = "controls">
             <form id="waveForm">        
                 <legend><p class="waveText">Wave Type</p>
                     <label>
-                        <input type="radio" name="wave" value="pianoSound" class="waveText"
-                            onclick="myPlayer.setWaveType(this.value)"> piano <br>
+                        <input type="radio" name="wave" value="pianoSound" class="waveText"> piano <br>
                     </label>
                     <label>
-                        <input type="radio" name="wave" value="sine" class="waveText"
-                            onclick="myPlayer.setWaveType(this.value)"> sine <br>
+                        <input type="radio" name="wave" value="sine" class="waveText"> sine <br>
                     </label>
                     <label>
-                        <input type="radio" name="wave" value="square" class="waveText"
-                            onclick="myPlayer.setWaveType(this.value);"> square  <br>
+                        <input type="radio" name="wave" value="square" class="waveText"> square  <br>
                     </label>           
-                        <input type="radio" name="wave" value="sawtooth" class="waveText"
-                            onclick="myPlayer.setWaveType(this.value);"> sawtooth  <br>
+                        <input type="radio" name="wave" value="sawtooth" class="waveText"> sawtooth  <br>
                     </label>
-                        <input type="radio" name="wave" value="triangle" class="waveText"
-                            onclick="myPlayer.setWaveType(this.value);"> triangle  <br>
+                        <input type="radio" name="wave" value="triangle" class="waveText"> triangle  <br>
                     </label>
                 </legend>
             </form>
@@ -37,15 +33,11 @@
                 <span class="volHeader">Volume</span> 
                 <input type="range" min="0" max="1" value="0.5" step='any'>
             </div>
-            <div class="control keys-checkbox" checked>
-                <span>Show Notes</span>
+            <div class="control notes-toggle" checked>
+                <span>Hide Notes</span>
                 <input type="checkbox">
             </div>
             <button id="captureBtn"><span>Record</span></button> 
-            <!-- <div class="control record-checkbox" checked>
-                <span>Record</span>
-                <input type="checkbox">
-            </div> -->
         </header>
         <ul class="piano-keys">
             <li class="white key" data-key="a"><span>c</span></li>
@@ -65,11 +57,12 @@
             <li class="white key" data-key="l"><span>d</span></li>
             <li class="black key" data-key="p"><span>d#</span></li>
             <li class="white key" data-key=";"><span>e</span></li>
-        </ul>  data-key="c"
+        </ul>
     </div>
 
 
     <script src="piano.js"></script> 
+    <script src="record.js"></script> 
 </body>
 </html>
 

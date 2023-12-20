@@ -13,14 +13,16 @@ body{
     background: #e3f2fd;
 }
 
-.wrapper{
+.piano{
     width: 780px;
     border-radius: 20px;
     padding: 35px 40px;
     background: #141414;
+    position: absolute;
+    z-index: 0;
 }
 
-.wrapper header {
+.piano #controls {
     color: #b2b2b2;
     display: flex;
     align-items: center;
@@ -49,7 +51,7 @@ header .control span {
 
 }
 
-.keys-checkbox input{
+.notes-toggle input{
     width: 60px;
     height: 30px;
     cursor: pointer;
@@ -60,7 +62,7 @@ header .control span {
     margin-left: 5px;
 }
 
-.keys-checkbox input::before{
+.notes-toggle input::before{
     content: " ";
     height: 20px;
     width: 20px;
@@ -74,41 +76,10 @@ header .control span {
 }
 
 
-.keys-checkbox input:checked::before{
+.notes-toggle input:checked::before{
     left: 35px;
     background: #ad0a0a;
 }
-
-.record-checkbox input{
-    width: 60px;
-    height: 30px;
-    cursor: pointer;
-    position: relative;
-    appearance: none;
-    border-radius: 30px;
-    background: #4b4b4b;
-    margin-left: 5px;
-}
-
-.record-checkbox input::before{
-    content: " ";
-    height: 20px;
-    width: 20px;
-    top: 50%;
-    left: 5px;
-    border-radius: inherit;
-    position: absolute;
-    background: #8c8c8c;
-    transform: translateY(-50%);
-    transition: all 0.3s ease;
-}
-
-
-.record-checkbox input:checked::before{
-    left: 35px;
-    background: #ad0a0a;
-}
-
 
 .piano-keys{ 
     display: flex;
@@ -175,6 +146,7 @@ header .control span {
     width: 70px;
     border:red 1px solid;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 #captureBtn span {
@@ -185,5 +157,12 @@ header .control span {
     height: 30px;
     width: 70px;
     border:red 1px solid;
+    background:linear-gradient(to bottom, red 0%, #ad0a0a 100%);
     border-radius: 3px;
+    cursor: pointer;
+}
+
+canvas {
+    z-index: -333;
+    background:rgb(20, 22, 20);
 }
