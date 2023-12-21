@@ -102,7 +102,7 @@ header .control span {
     margin: 0 -22px 0 -22px;
     z-index: 2;
     background: linear-gradient(#333, #000);
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 4px 4px;
 }
 
 .piano-keys .black.active { 
@@ -114,7 +114,7 @@ header .control span {
     width: 70px;
     height: 230px;
     background: linear-gradient(#fff 96%, #eee 4%);
-    border-radius: 8px;
+    border-radius: 7px;
     border: 1px solid;
 }
 
@@ -164,5 +164,5 @@ header .control span {
 
 canvas {
     z-index: -333;
-    background:rgb(20, 22, 20);
+    background:rgba(34, 147, 0, 0.387)
 }
